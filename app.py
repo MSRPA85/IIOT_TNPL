@@ -29,7 +29,7 @@ def add_db(time1, pm2gsm, pm2speed, pm2moist, papbrk, ashiftprod, bshiftprod, cs
 
 
 url = "opc.tcp://192.168.225.42:4845"
-client = Client(url)
+client = Client(url, timeout=5)
 client.connect()
 data = dict()
 
